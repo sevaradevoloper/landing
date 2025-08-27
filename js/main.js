@@ -45,14 +45,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-
-         // Bars uchun bosilganda menyuni ochish funktsiyasi
+     // Bars uchun bosilganda navigationni ochish/yopish
         document.querySelector('.bars').addEventListener('click', function() {
-            alert('Bars menyusi bosildi! Bu yerda mobil navigatsiya ochiladi.');});
+            // Navigationni ochish/yopish
+            document.querySelector('.navigation').classList.toggle('active');
+            
+            // Bars animatsiyasi
+            this.classList.toggle('active');
+        });
+        
+        // Navigationdagi linklarni bosganda menyuni yopish (faqat kichik ekranda)
+        document.querySelectorAll('.navigation .header__link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 414) {
+                    document.querySelector('.navigation').classList.remove('active');
+                    document.querySelector('.bars').classList.remove('active');
+                }
+            });
+        });
+        
+        // Ekran kattalashganda navigationni yopish
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 414) {
+                document.querySelector('.navigation').classList.remove('active');
+                document.querySelector('.bars').classList.remove('active');
+            }
+        });
+
+
+
+        
 
 
 
