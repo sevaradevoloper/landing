@@ -29,10 +29,9 @@ body {
 .nav__container{
     display: flex;
     align-items: center;
+    gap: 25px;
 }
 .nav__link{
-    display: flex;
-    gap: 25px;
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;
@@ -41,53 +40,244 @@ body {
     padding-bottom: 10px;
     transition: all 0.3s ease;
 }
-.nav__link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
+.nav__link:hover{
+    filter: drop-shadow(1px 1px 10px rgb(68, 137, 241));
+}
+.nav__container img{
+    width: 28px;
+    height: 28px;
+}
+.header{
+   position: fixed;
     left: 0;
     right: 0;
-    width: 0;
-    height: 1px;
-    background-color: #304df4;
-    transition: width 0.6s ease;
+    top: 100;
+    height: 103px;
+    padding: 25px 0;
+    backdrop-filter: blur(50px);
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.header__btn{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.header__logo{
+font-weight: 400;
+font-size: 32px;
+color: #FFFFFF;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+}
+.header__link{
+    color: #FFFFFF;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+.header__link::after{
+position: absolute;
+content: "" ;
+inset: 0; 
+background:white;
+scale: 1 0; 
+z-index: -1;
+transition: 0.45s; 
+border-radius: 10px;
+}
+.header__link:hover{
+    color: #1e272e;
+    font-size: 18px;
+}
+.header__link:hover::after{
+    scale: 1 1;
+}
+        .search {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
         
-.nav__link:hover {
-    color: #e2e2e9;
-}
+        .search-input {
+            width: 50px;
+            height: 50px;
+            background-color: #454545;
+            border: 0;
+            padding: 15px;
+            font-size: 16px;
+            color: #FFFFFF;
+            transition: all 0.8s ease;
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            pointer-events: none;
+        }
         
-.nav__link:hover::after {
-    width: 100%;
+        .search-input:focus {
+            outline: none;
+        }
+        
+        .search-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #ece8e8;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 2;
+            transition: all 0.8s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .search-icon:hover {
+            background-color: #d1c07d;
+            transform: scale(1.05);
+        }
+        
+        .search-icon::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 2px solid #1e272e;
+            border-radius: 50%;
+            transform: translate(-2px, -2px);
+        }
+        
+        .search-icon::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 8px;
+            background: #1e272e;
+            transform: translate(6px, 6px) rotate(315deg);
+        }
+        
+        .search.active .search-input {
+            width: 300px;
+            opacity: 1;
+            pointer-events: all;
+            padding-left: 60px;
+        }
+        
+        .search.active .search-icon {
+            left: 250px;
+            background-color: #fff;
+        }
+        
+        .loading-indicator {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid #f3df8d;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .search.loading .loading-indicator {
+            opacity: 1;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .instructions {
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .bars {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .bar {
+            width: 25px;
+            height: 2px;
+            background-color: #FFFFFF;
+            margin-top: 5px;
+            transition: 0.3s;
+        }
+        
+        .content {
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .content h1 {
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* iPhone 11 (414px va kichikroq) uchun media query */
+        @media (max-width: 414px) {
+            .navigation {
+                display: none;
+            }
+            
+            .bars {
+                display: flex;
+            }
+            
+            .content h1 {
+                font-size: 24px;
+            }
+            
+            .content p {
+                font-size: 14px;
+            }
+        }
+        
+/* hero-------------------------------------------------- */
+
+
+.hero{
+    margin-top: 100px;
+    padding: 50px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* header-------------------------------------------------- */
+.hero__container{
+    display: flex;
+    justify-content: space-between;
+}
 /* header-------------------------------------------------- */
 /* header-------------------------------------------------- */
 /* header-------------------------------------------------- */
