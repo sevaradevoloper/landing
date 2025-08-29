@@ -334,7 +334,8 @@ border-radius: 10px;
   background: linear-gradient(251.96deg, #1e6969 -20.95%, #78dbce 110.78%);
 }
 .hero__btn{
-  background: none;  
+  background: none;
+  border: solid 1px #FFFFFF;  
 }
 .hero__btn::before{
   background: linear-gradient(251.96deg, #1e6969 -20.95%, #78dbce 110.78%);
@@ -904,7 +905,7 @@ border-radius: 10px;
             
             /* Hero section */
             .hero {
-                margin-top: 700px;
+                margin-top: 500px;
                 padding: 20px 0;
             }
             
