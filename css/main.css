@@ -1121,11 +1121,6 @@ border-radius: 10px;
                 gap: 15px;
             }
             
-            /* AOS animatsiyalarni mobilda optimallashtirish */
-            [data-aos] {
-                opacity: 1 !important;
-                transform: none !important;
-            }
             
             /* Navigation menyuni yashirish/ko'rsatish */
             .navigation {
@@ -1415,11 +1410,6 @@ border-radius: 10px;
                 gap: 15px;
             }
             
-            /* AOS animatsiyalarni mobilda optimallashtirish */
-            [data-aos] {
-                opacity: 1 !important;
-                transform: none !important;
-            }
             
             /* Navigation menyuni yashirish/ko'rsatish */
             .navigation {
