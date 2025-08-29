@@ -319,6 +319,8 @@ border-radius: 10px;
 .hero__button-one{
   background: linear-gradient(90deg, #434343 26.85%, rgba(67, 67, 67, 0) 100%);  
   margin-bottom: 25px;
+  border: solid 1px #FFFFFF;
+  
 }
 .hero__button-one::before{
   background: linear-gradient(251.96deg, #1e6969 -20.95%, #78dbce 110.78%);
@@ -633,5 +635,817 @@ margin-bottom: 25px;
 .grab__box button::before{
   background: linear-gradient(251.96deg, #1e6969 -20.95%, #78dbce 110.78%);
 }
-/* header-------------------------------------------------- */
-/* header-------------------------------------------------- */
+/* wrapper-------------------------------------------------- */
+.wrapper{
+    padding: 50px 0;
+}
+.wrapper__container{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper__container button{
+    width: 220px;
+    height: 54px;
+    border: 1px solid #FFFFFF;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 17px;
+    color: #FFFFFFE5;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: none;
+}
+        
+
+.wrapper__container button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    transition: all 0.5s ease;
+    z-index: -1;
+    border-radius: 100px;
+    background: linear-gradient(251.96deg, #1e6969 -20.95%, #78dbce 110.78%);
+}
+        
+
+.wrapper__container button:hover {
+    color: #000;
+    border-color: transparent;
+}
+        
+
+.wrapper__container button:hover::before {
+    width: 100%;
+}
+.wrapper__box{
+    flex-direction: column;
+}
+.wrapper__buttons div{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 440px;
+}
+.wrapper__buttons button{
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.wrapper__buttons button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        
+        .wrapper__buttons button:hover:before {
+            left: 0;
+        }
+.wrapper__buttons input{
+    margin-top: 25px;
+}
+.wrapper__input{
+    flex-direction: column;
+}
+.wrapper__btn{
+    margin-left: 100px;
+}
+ .input-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .input-box input, button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            color: #333;
+            background: #f5f5f5;
+            border: none;
+            border-radius: 12px;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .input-box input,button:focus {
+            background: #fff;
+            box-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+        }
+        
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+            color: #888;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        
+        .input-box input:focus + label,
+        .input-box input.has-value  + label {
+            top: -10px;
+            left: 10px;
+            font-size: 0.9rem;
+            color: #6a11cb;
+            background: #fff;
+            padding: 0 10px;
+        }
+        
+        .input-box input::placeholder {
+            color: transparent;
+        }
+.wrapper__box{
+    max-width: 390px;
+}
+.wrapper__box h5{
+font-weight: 400;
+font-style: Regular;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 0%;
+margin-bottom: 30px;
+}
+.wrapper__box p{
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+max-width: 300px;
+margin-bottom: 10px;
+}
+.wrapper__box hr{
+max-width: 390px;
+margin-bottom: 30px;
+border: 2px solid #FFFFFF61;
+}
+.wrapper__box button{
+    margin-bottom: 15px;
+}
+.wrapper__boxes{
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+.wrapper__boxes a{
+margin-bottom: 100px;
+font-weight: 400;
+font-style: Regular;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+position: relative;
+cursor: pointer;
+padding: 0.5rem 1rem;
+}
+.wrapper__boxes a::after{
+position: absolute;
+content: "" ;
+inset: 0; 
+background:white;
+scale: 1 0; 
+z-index: -1;
+transition: 0.45s; 
+border-radius: 10px;
+}
+.wrapper__boxes a:hover{
+    color: #1e272e;
+    font-size: 18px;
+}
+.wrapper__boxes a:hover::after{
+    scale: 1 1;
+}
+
+/* footer-------------------------------------------------- */
+.footer{
+    padding: 25px 0;
+}
+.footer__container{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.footer__container a{
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+     @media (max-width: 414px) {
+            /* Navbar */
+            .nav {
+                padding: 15px 0;
+            }
+            
+            .nav__container {
+                justify-content: center;
+                padding: 0 10px;
+            }
+            
+            /* Header */
+            .header {
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            .header__container {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+                margin: 15px 0;
+            }
+            
+            .header__btn {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .search {
+                order: 3;
+                width: 100%;
+                margin-top: 15px;
+            }
+            
+            .search.active .search-input {
+                width: 100%;
+            }
+            
+            .search.active .search-icon {
+                left: calc(100% - 60px);
+            }
+            
+            .header__logo {
+                font-size: 24px;
+            }
+            
+            /* Hero section */
+            .hero {
+                margin-top: 50px;
+                padding: 20px 0;
+            }
+            
+            .hero__container {
+                flex-direction: column;
+            }
+            
+            .hero__box {
+                margin-top: 0;
+                text-align: center;
+            }
+            
+            .hero__title {
+                font-size: 32px;
+                max-width: 100%;
+            }
+            
+            .hero__text {
+                font-size: 16px;
+                max-width: 100%;
+            }
+            
+            .hero__buttons {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .hero__image {
+                position: relative;
+                right: 0;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .hero__img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+            
+            .hero__boxes {
+                margin-top: 30px;
+            }
+            
+            .hero__boxes-image {
+                width: 100%;
+                height: auto;
+            }
+            
+            /* Products section */
+            .producs__links {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                padding-bottom: 10px;
+                gap: 10px;
+            }
+            
+            .products__link {
+                white-space: nowrap;
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+            
+            .products__list {
+                justify-content: center;
+            }
+            
+            .products__items {
+                width: 160px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            
+            .products__img {
+                width: 100%;
+                height: auto;
+            }
+            
+            /* Collection section */
+            .collection__box {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .collection__title, .collection__text {
+                width: 100%;
+            }
+            
+            .collection__title {
+                font-size: 28px;
+            }
+            
+            .collection__text {
+                font-size: 16px;
+            }
+            
+            .collection__list {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .collection__items {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .collection__image-one div, 
+            .collection__image-two div {
+                position: relative;
+                top: 0;
+                padding: 20px;
+            }
+            
+            .collection__image-one h3,
+            .collection__image-two h3 {
+                width: 100%;
+                font-size: 24px;
+            }
+            
+            /* Stores section */
+            .stores h2 {
+                position: relative;
+                font-size: 32px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .stores__list {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .stores__items {
+                position: relative;
+            }
+            
+            .stores__items img {
+                width: 100%;
+            }
+            
+            .stores__items h5 {
+                position: relative;
+                top: 0;
+                width: 100%;
+                font-size: 18px;
+                margin: 15px 0;
+                text-align: center;
+            }
+            
+            /* Grab section */
+            .grab {
+                height: auto;
+                padding: 40px 0;
+            }
+            
+            .grab__container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .grab__box {
+                position: relative;
+                top: 0;
+                padding: 0 20px;
+            }
+            
+            .grab__box h2 {
+                font-size: 28px;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .grab__container img {
+                position: relative;
+                top: 0;
+                width: 100%;
+                max-width: 300px;
+                margin-top: 30px;
+            }
+            
+            /* Wrapper section */
+            .wrapper__container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .wrapper__box, .wrapper__boxes {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .wrapper__buttons div {
+                justify-content: center;
+                max-width: 100%;
+            }
+            
+            .wrapper__btn {
+                margin: 15px 0;
+            }
+            
+            .input-box {
+                width: 100%;
+            }
+            
+            /* Footer */
+            .footer__container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            /* AOS animatsiyalarni mobilda optimallashtirish */
+            [data-aos] {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            
+            /* Navigation menyuni yashirish/ko'rsatish */
+            .navigation {
+                display: none;
+                width: 100%;
+            }
+            
+            .navigation.active {
+                display: flex;
+            }
+            
+            .bars {
+                display: flex;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+                 @media (max-width: 714px) {
+            /* Navbar */
+            .nav {
+                padding: 15px 0;
+            }
+            
+            .nav__container {
+                justify-content: center;
+                padding: 0 10px;
+            }
+            
+            /* Header */
+            .header {
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            .header__container {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+                margin: 15px 0;
+            }
+            
+            .header__btn {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .search {
+                order: 3;
+                width: 100%;
+                margin-top: 15px;
+            }
+            
+            .search.active .search-input {
+                width: 100%;
+            }
+            
+            .search.active .search-icon {
+                left: calc(100% - 60px);
+            }
+            
+            .header__logo {
+                font-size: 24px;
+            }
+            
+            /* Hero section */
+            .hero {
+                margin-top: 50px;
+                padding: 20px 0;
+            }
+            
+            .hero__container {
+                flex-direction: column;
+            }
+            
+            .hero__box {
+                margin-top: 0;
+                text-align: center;
+            }
+            
+            .hero__title {
+                font-size: 32px;
+                max-width: 100%;
+            }
+            
+            .hero__text {
+                font-size: 16px;
+                max-width: 100%;
+            }
+            
+            .hero__buttons {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .hero__image {
+                position: relative;
+                right: 0;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .hero__img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+            
+            .hero__boxes {
+                margin-top: 30px;
+            }
+            
+            .hero__boxes-image {
+                width: 100%;
+                height: auto;
+            }
+            
+            /* Products section */
+            .producs__links {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                padding-bottom: 10px;
+                gap: 10px;
+            }
+            
+            .products__link {
+                white-space: nowrap;
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+            
+            .products__list {
+                justify-content: center;
+            }
+            
+            .products__items {
+                width: 160px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            
+            .products__img {
+                width: 100%;
+                height: auto;
+            }
+            
+            /* Collection section */
+            .collection__box {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .collection__title, .collection__text {
+                width: 100%;
+            }
+            
+            .collection__title {
+                font-size: 28px;
+            }
+            
+            .collection__text {
+                font-size: 16px;
+            }
+            
+            .collection__list {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .collection__items {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .collection__image-one div, 
+            .collection__image-two div {
+                position: relative;
+                top: 0;
+                padding: 20px;
+            }
+            
+            .collection__image-one h3,
+            .collection__image-two h3 {
+                width: 100%;
+                font-size: 24px;
+            }
+            
+            /* Stores section */
+            .stores h2 {
+                position: relative;
+                font-size: 32px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .stores__list {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .stores__items {
+                position: relative;
+            }
+            
+            .stores__items img {
+                width: 100%;
+            }
+            
+            .stores__items h5 {
+                position: relative;
+                top: 0;
+                width: 100%;
+                font-size: 18px;
+                margin: 15px 0;
+                text-align: center;
+            }
+            
+            /* Grab section */
+            .grab {
+                height: auto;
+                padding: 40px 0;
+            }
+            
+            .grab__container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .grab__box {
+                position: relative;
+                top: 0;
+                padding: 0 20px;
+            }
+            
+            .grab__box h2 {
+                font-size: 28px;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .grab__container img {
+                position: relative;
+                top: 0;
+                width: 100%;
+                max-width: 300px;
+                margin-top: 30px;
+            }
+            
+            /* Wrapper section */
+            .wrapper__container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .wrapper__box, .wrapper__boxes {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .wrapper__buttons div {
+                justify-content: center;
+                max-width: 100%;
+            }
+            
+            .wrapper__btn {
+                margin: 15px 0;
+            }
+            
+            .input-box {
+                width: 100%;
+            }
+            
+            /* Footer */
+            .footer__container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            /* AOS animatsiyalarni mobilda optimallashtirish */
+            [data-aos] {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            
+            /* Navigation menyuni yashirish/ko'rsatish */
+            .navigation {
+                display: none;
+                width: 100%;
+            }
+            
+            .navigation.active {
+                display: flex;
+            }
+            
+            .bars {
+                display: flex;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            /* Search bar tuzatish */
+            .search {
+                width: 100%;
+            }
+        }
+            
+            /* Search bar tuzatish */
+            .search {
+                width: 100%;
+            }
+        }
